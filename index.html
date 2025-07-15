@@ -318,6 +318,10 @@
         galleryBtn: "Galería",
         galleryTitle: "Imágenes del Mod",
         galleryCaptions: ["Estructura", "Survivors", "Killers", "Skins"],
+        changelogTitle: "Changelog (Última versión)",
+        changelogLoading: "<em>Cargando...</em>",
+        changelogError: "Error al cargar el changelog.",
+        changelogNotFound: "No se encontró información de releases.",
         credits: `<b>Créditos</b><br><br>
           Creado usando el creador de mods <a href="https://mcreator.net/about" target="_blank" style="color:#56aaff;">MCreator</a><br><br>
           Skins por: <span style="color:#56aaff;">LisPixel</span> <span style="font-size:0.85em;">(Excepto Jason, Mafioso, Guest1337 y Noob Skins)</span><br>
@@ -355,6 +359,10 @@
         galleryBtn: "Gallery",
         galleryTitle: "Mod Screenshots",
         galleryCaptions: ["Structure", "Survivors", "Killers", "Skins"],
+        changelogTitle: "Changelog (Latest Version)",
+        changelogLoading: "<em>Loading...</em>",
+        changelogError: "Error loading changelog.",
+        changelogNotFound: "No release information found.",
         credits: `<b>Credits</b><br><br>
           Created using mod maker <a href="https://mcreator.net/about" target="_blank" style="color:#56aaff;">MCreator</a><br><br>
           Skins by: <span style="color:#56aaff;">LisPixel</span> <span style="font-size:0.85em;">(Except Jason, Mafioso, Guest1337 and Noob Skins)</span><br>
@@ -370,24 +378,11 @@
       }
     };
 
-    // Galería de imágenes en archivos locales screenshot1.png, screenshot2.png,...
     const galleryImages = [
-      {
-        src: "estructura.png",
-        alt: "Estructura / Structure"
-      },
-      {
-        src: "survivors.png",
-        alt: "Survivors"
-      },
-      {
-        src: "killers.png",
-        alt: "Killers"
-      },
-      {
-        src: "skins.png",
-        alt: "Skins"
-      }
+      { src: "estructura.png", alt: "Estructura / Structure" },
+      { src: "survivors.png", alt: "Survivors" },
+      { src: "killers.png", alt: "Killers" },
+      { src: "skins.png", alt: "Skins" }
     ];
 
     function setLang(lang) {
@@ -418,14 +413,16 @@
       document.getElementById('creditsBtn').textContent = content[lang].creditsBtn;
       document.getElementById('galleryBtn').textContent = content[lang].galleryBtn;
       document.getElementById('galleryTitle').textContent = content[lang].galleryTitle;
+      document.getElementById('changelogTitle').textContent = content[lang].changelogTitle;
+      document.getElementById('changelogContent').innerHTML = content[lang].changelogLoading;
       document.getElementById('lang-es').classList.toggle('active', lang === 'es');
       document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      fetchLatestRelease(lang);
     }
 
     function renderGallery() {
       const galleryGrid = document.getElementById('galleryGrid');
       galleryGrid.innerHTML = '';
-      // Obtener captions traducidos según idioma
       const lang = document.documentElement.lang;
       const captions = content[lang].galleryCaptions;
       galleryImages.forEach((img, idx) => {
@@ -456,6 +453,25 @@
       document.getElementById('fullImgModal').style.display = "none";
     }
 
+    function fetchLatestRelease(lang) {
+      // fallback to current language if not provided
+      lang = lang || document.documentElement.lang || 'es';
+      const contentLang = content[lang];
+      fetch('https://api.github.com/repos/AlfonsoRV69/forsakenmc/releases/latest')
+        .then(response => response.json())
+        .then(release => {
+          if (release && release.body) {
+            document.getElementById('changelogContent').innerHTML =
+              `<strong>${release.name}</strong><br>${release.body.replace(/\n/g, '<br>')}`;
+          } else {
+            document.getElementById('changelogContent').innerHTML = contentLang.changelogNotFound;
+          }
+        })
+        .catch(() => {
+          document.getElementById('changelogContent').innerHTML = contentLang.changelogError;
+        });
+    }
+
     window.onload = function() {
       setLang('es');
       document.getElementById('lang-en').onclick = () => setLang('en');
@@ -484,6 +500,9 @@
 
       // Full image modal
       document.getElementById('closeFullImg').onclick = closeFullImg;
+
+      // Changelog inicial (ya se llama en setLang, pero por si recargas el idioma)
+      fetchLatestRelease('es');
     };
   </script>
 </head>
@@ -521,6 +540,10 @@
       ¿Dudas o sugerencias? Abre un <a href="https://github.com/AlfonsoRV69/forsakenmc/issues" target="_blank">issue</a>.<br>
       ¡Gracias por apoyar el mod!
     </p>
+    <h2 id="changelogTitle">Changelog (Última versión)</h2>
+    <div id="changelogContent">
+      <em>Cargando...</em>
+    </div>
   </div>
   <!-- Modal Créditos -->
   <div id="creditsModal" class="modal">
