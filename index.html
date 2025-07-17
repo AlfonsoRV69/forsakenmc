@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/fmcpfp.png" />
   <title>ForsakenMC - Mod para Minecraft Java</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
   <style>
     body {
       min-height: 100vh;
-      background:
-        linear-gradient(to bottom, #35713e 0%, #b62e2e 50%, #191a1b 100%) fixed;
+      background: linear-gradient(to bottom, #35713e 0%, #b62e2e 50%, #191a1b 100%)
+        fixed;
       color: #dad793;
-      font-family: 'Press Start 2P', monospace;
+      font-family: "Press Start 2P", monospace;
       margin: 0;
       padding: 0;
     }
@@ -43,7 +46,8 @@
       margin-bottom: 0.2em;
       letter-spacing: 1px;
     }
-    .main-card ul, .main-card ol {
+    .main-card ul,
+    .main-card ol {
       text-align: left;
       margin: 0 auto 1.2em auto;
       max-width: 550px;
@@ -111,13 +115,15 @@
       font-weight: bold;
       transition: background 0.2s, color 0.2s, border 0.2s;
     }
-    .lang-btn.active, .lang-btn:hover {
+    .lang-btn.active,
+    .lang-btn:hover {
       background: #b62e2e;
       color: #fff;
       border-color: #fff;
       box-shadow: 0 0 8px #fff;
     }
-    .credits-btn, .gallery-btn {
+    .credits-btn,
+    .gallery-btn {
       background: #56aaff;
       color: #203c10;
       border: 2px solid #fff;
@@ -144,12 +150,13 @@
       color: #fff;
       box-shadow: 0 0 14px #b62e2e;
     }
-    .gallery-btn { }
+    .gallery-btn {
+    }
     .credits-gallery-row {
       display: flex;
       gap: 24px;
       justify-content: center;
-      margin-bottom: 10px;
+      margin: 20px 0 10px 0;
       flex-wrap: wrap;
     }
     /* Modal styles */
@@ -157,10 +164,12 @@
       display: none;
       position: fixed;
       z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
       overflow: auto;
-      background: rgba(0,0,0,0.88);
+      background: rgba(0, 0, 0, 0.88);
     }
     .modal-content {
       background-color: #232d19;
@@ -171,7 +180,7 @@
       width: 90%;
       max-width: 540px;
       color: #dad793;
-      font-family: 'Press Start 2P', monospace;
+      font-family: "Press Start 2P", monospace;
       font-size: 0.93em;
       box-shadow: 0 0 32px #111;
       text-align: center;
@@ -239,9 +248,11 @@
       display: none;
       position: fixed;
       z-index: 2000;
-      left: 0; top: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.92);
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.92);
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -266,8 +277,15 @@
       z-index: 2100;
     }
     @media (max-width: 900px) {
-      .main-card { margin: 18px; padding: 12px; }
-      .credits-gallery-row { flex-direction: column; align-items: stretch; gap: 12px;}
+      .main-card {
+        margin: 18px;
+        padding: 12px;
+      }
+      .credits-gallery-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
     }
     @media (max-width: 600px) {
       .main-card {
@@ -276,20 +294,72 @@
         border-width: 3px;
         border-radius: 10px;
       }
-      h1 { font-size: 1.1em; }
-      h2 { font-size: 1em; }
-      .lang-switch { justify-content: center; }
+      h1 {
+        font-size: 1.1em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+      .lang-switch {
+        justify-content: center;
+      }
       .credits-btn,
-      .gallery-btn { margin: 0 6px 12px 6px; }
-      .modal-content { padding: 12px; border-width: 3px; }
-      .logo-fmcpfp { width: 64px; height: 64px; margin-bottom: 14px;}
-      .gallery-grid img { max-width: 100px; height: 62px;}
-      .gallery-item { max-width: 100px; }
+      .gallery-btn {
+        margin: 0 6px 12px 6px;
+      }
+      .modal-content {
+        padding: 12px;
+        border-width: 3px;
+      }
+      .logo-fmcpfp {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 14px;
+      }
+      .gallery-grid img {
+        max-width: 100px;
+        height: 62px;
+      }
+      .gallery-item {
+        max-width: 100px;
+      }
     }
     @media (max-width: 420px) {
-      .main-card { padding: 2vw; }
-      .logo-fmcpfp { width: 38px; height: 38px;}
-      .btn { font-size: 0.81em; padding: 8px 0; }
+      .main-card {
+        padding: 2vw;
+      }
+      .logo-fmcpfp {
+        width: 38px;
+        height: 38px;
+      }
+      .btn {
+        font-size: 0.81em;
+        padding: 8px 0;
+      }
+    }
+
+    /* Nuevo estilo para botón Discord al pie */
+    .discord-btn-footer {
+      display: inline-block;
+      background: #5865f2;
+      color: white;
+      padding: 8px 20px;
+      font-weight: bold;
+      font-family: "Press Start 2P", monospace;
+      border: 2px solid #4752c4;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #5865f2cc, 0 0 5px #4752c4 inset;
+      font-size: 0.9em;
+      text-decoration: none;
+      transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+      user-select: none;
+      letter-spacing: 2px;
+    }
+    .discord-btn-footer:hover {
+      background: #4752c4;
+      box-shadow: 0 0 14px #4752c4ee, 0 0 8px #5865f2 inset;
+      transform: scale(1.05);
     }
   </style>
   <script>
@@ -297,23 +367,25 @@
       es: {
         title: "ForsakenMC - Mod para Minecraft Java",
         mainTitle: "ForsakenMC",
-        subtitle: "ForsakenMC es un mod para <span style='color:#6dca45;'>Minecraft Java Edition</span> para <b>NeoForge 1.21.1</b> que trae contenido del popular juego de Roblox <b>Forsaken</b> a Minecraft. ¡Vive nuevas aventuras y desafíos inspirados en Forsaken!",
+        subtitle:
+          "ForsakenMC es un mod para <span style='color:#6dca45;'>Minecraft Java Edition</span> para <b>NeoForge 1.21.1</b> que trae contenido del popular juego de Roblox <b>Forsaken</b> a Minecraft. ¡Vive nuevas aventuras y desafíos inspirados en Forsaken!",
         featuresTitle: "Características principales",
         features: [
           "Añade armas, mobs, ítems y mecánicas de Forsaken (Roblox)",
           "Añade una nueva estructura de Forsaken",
-          "Enfréntate a mobs personalizados y desafiantes de Forsaken"
+          "Enfréntate a mobs personalizados y desafiantes de Forsaken",
         ],
         installTitle: "Instalación",
         installSteps: [
           "Instala <a href='https://neoforged.net/' target='_blank'>NeoForge 1.21.1</a> para Minecraft.",
           "Descarga el archivo <code>.jar</code> de ForsakenMC desde la <a href='https://github.com/AlfonsoRV69/forsakenmc/releases' target='_blank'>página de releases</a>.",
           "Coloca el archivo en la carpeta <code>mods</code> de tu instalación de Minecraft.",
-          "¡Inicia el juego y disfruta!"
+          "¡Inicia el juego y disfruta!",
         ],
         download: "Descargar ForsakenMC",
         supportTitle: "Soporte y comunidad",
-        support: "¿Dudas o sugerencias? Abre un <a href='https://github.com/AlfonsoRV69/forsakenmc/issues' target='_blank'>issue</a>.<br>¡Gracias por apoyar el mod!",
+        support:
+          '¿Dudas o sugerencias? Abre un <a href="https://github.com/AlfonsoRV69/forsakenmc/issues" target="_blank">issue</a>.<br>¡Gracias por apoyar el mod!',
         creditsBtn: "Créditos",
         galleryBtn: "Galería",
         galleryTitle: "Imágenes del Mod",
@@ -323,247 +395,344 @@
         changelogError: "Error al cargar el changelog.",
         changelogNotFound: "No se encontró información de releases.",
         credits: `<b>Créditos</b><br><br>
-          Creado usando el creador de mods <a href="https://mcreator.net/about" target="_blank" style="color:#56aaff;">MCreator</a><br><br>
-          Skins por: <span style="color:#56aaff;">LisPixel</span> <span style="font-size:0.85em;">(Excepto Jason, Mafioso, Guest1337 y Noob Skins)</span><br>
-          Skin de Jason por: <span style="color:#56aaff;">Bluudud3</span> (<a href="https://www.planetminecraft.com/skin/jason-forssken/" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Skin de Mafioso por: <span style="color:#56aaff;">PHIGHTING</span> (<a href="https://www.planetminecraft.com/skin/mafioso-forsaken-dream-game/" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Skin de Guest1337 por: <span style="color:#56aaff;">ENFIN</span> (<a href="https://www.planetminecraft.com/skin/dffsds/" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Skin de Noob por: ??? (<a href="https://es.namemc.com/skin/bd153c6f77d160e1" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Note Block Covers: <span style="color:#56aaff;">Aedan</span><br>
-          Canciones: Forsaken Sound Team, Key After Key, vladosikos17, 89M, Epic<br><br>
-          Inspirado por el juego de Roblox <b>Forsaken</b>.<br><br>
-          <span style="font-size:0.8em;opacity:0.9;">Este mod y esta página no están afiliados a Mojang, Microsoft, Roblox Corp. ni Forsaken Dev Team.<br>
-          .</span>`
+              Creado usando el creador de mods <a href="https://mcreator.net/about" target="_blank" style="color:#56aaff;">MCreator</a><br><br>
+              Skins por: <span style="color:#56aaff;">LisPixel</span> <span style="font-size:0.85em;">(Excepto Jason, Mafioso, Guest1337 y Noob Skins)</span><br>
+              Skin de Jason por: <span style="color:#56aaff;">Bluudud3</span> (<a href="https://www.planetminecraft.com/skin/jason-forssken/" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Skin de Mafioso por: <span style="color:#56aaff;">PHIGHTING</span> (<a href="https://www.planetminecraft.com/skin/mafioso-forsaken-dream-game/" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Skin de Guest1337 por: <span style="color:#56aaff;">ENFIN</span> (<a href="https://www.planetminecraft.com/skin/dffsds/" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Skin de Noob por: ??? (<a href="https://es.namemc.com/skin/bd153c6f77d160e1" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Note Block Covers: <span style="color:#56aaff;">Aedan</span><br>
+              Canciones: Forsaken Sound Team, Key After Key, vladosikos17, 89M, Epic<br><br>
+              Inspirado por el juego de Roblox <b>Forsaken</b>.<br><br>
+              <span style="font-size:0.8em;opacity:0.9;">Este mod y esta página no están afiliados a Mojang, Microsoft, Roblox Corp. ni Forsaken Dev Team.<br>
+              .</span>`,
       },
       en: {
         title: "ForsakenMC - Minecraft Java Mod",
         mainTitle: "ForsakenMC",
-        subtitle: "ForsakenMC is a mod for <span style='color:#6dca45;'>Minecraft Java Edition</span> for <b>NeoForge 1.21.1</b> that brings content from the popular Roblox game <b>Forsaken</b> into Minecraft! Experience new adventures and challenges inspired by Forsaken’s world.",
+        subtitle:
+          "ForsakenMC is a mod for <span style='color:#6dca45;'>Minecraft Java Edition</span> for <b>NeoForge 1.21.1</b> that brings content from the popular Roblox game <b>Forsaken</b> into Minecraft! Experience new adventures and challenges inspired by Forsaken.",
         featuresTitle: "Main Features",
         features: [
-          "Adds weapons, mobs, items, and mechanics from Roblox's Forsaken",
-          "Adds a new structure from Forsaken",
-          "Fight custom and challenging Forsaken mobs"
+          "Adds Forsaken-inspired weapons, mobs, items and mechanics",
+          "Adds a new Forsaken structure",
+          "Fight challenging custom Forsaken mobs",
         ],
         installTitle: "Installation",
         installSteps: [
           "Install <a href='https://neoforged.net/' target='_blank'>NeoForge 1.21.1</a> for Minecraft.",
-          "Download the <code>.jar</code> file of ForsakenMC from the <a href='https://github.com/AlfonsoRV69/forsakenmc/releases' target='_blank'>releases page</a>.",
-          "Place the file in your Minecraft <code>mods</code> folder.",
-          "Start the game and enjoy!"
+          "Download the ForsakenMC <code>.jar</code> file from the <a href='https://github.com/AlfonsoRV69/forsakenmc/releases' target='_blank'>releases page</a>.",
+          "Place the file into your Minecraft <code>mods</code> folder.",
+          "Launch the game and enjoy!",
         ],
         download: "Download ForsakenMC",
-        supportTitle: "Support & Community",
-        support: "Questions or suggestions? Open an <a href='https://github.com/AlfonsoRV69/forsakenmc/issues' target='_blank'>issue</a>.<br>Thank you for supporting the mod!",
+        supportTitle: "Support and Community",
+        support:
+          'Questions or suggestions? Open an <a href="https://github.com/AlfonsoRV69/forsakenmc/issues" target="_blank">issue</a>.<br>Thanks for supporting the mod!',
         creditsBtn: "Credits",
         galleryBtn: "Gallery",
-        galleryTitle: "Mod Screenshots",
+        galleryTitle: "Mod Images",
         galleryCaptions: ["Structure", "Survivors", "Killers", "Skins"],
-        changelogTitle: "Changelog (Latest Version)",
+        changelogTitle: "Changelog (Latest version)",
         changelogLoading: "<em>Loading...</em>",
         changelogError: "Error loading changelog.",
-        changelogNotFound: "No release information found.",
+        changelogNotFound: "Release info not found.",
         credits: `<b>Credits</b><br><br>
-          Created using mod maker <a href="https://mcreator.net/about" target="_blank" style="color:#56aaff;">MCreator</a><br><br>
-          Skins by: <span style="color:#56aaff;">LisPixel</span> <span style="font-size:0.85em;">(Except Jason, Mafioso, Guest1337 and Noob Skins)</span><br>
-          Jason skin by: <span style="color:#56aaff;">Bluudud3</span> (<a href="https://www.planetminecraft.com/skin/jason-forssken/" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Mafioso skin by: <span style="color:#56aaff;">PHIGHTING</span> (<a href="https://www.planetminecraft.com/skin/mafioso-forsaken-dream-game/" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Guest1337 skin by: <span style="color:#56aaff;">ENFIN</span> (<a href="https://www.planetminecraft.com/skin/dffsds/" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Noob skin by: ??? (<a href="https://es.namemc.com/skin/bd153c6f77d160e1" target="_blank" style="color:#56aaff;">link</a>)<br>
-          Note Block Covers: <span style="color:#56aaff;">Aedan</span><br>
-          Songs: Forsaken Sound Team, Key After Key, vladosikos17, 89M, Epic<br><br>
-          Inspired by the Roblox game <b>Forsaken</b>.<br><br>
-          <span style="font-size:0.8em;opacity:0.9;">This mod and page are not affiliated with Mojang, Microsoft, Roblox Corp. or Forsaken Dev Team.<br>
-          </span>`
-      }
+              Created using <a href="https://mcreator.net/about" target="_blank" style="color:#56aaff;">MCreator</a><br><br>
+              Skins by: <span style="color:#56aaff;">LisPixel</span> <span style="font-size:0.85em;">(Except Jason, Mafioso, Guest1337 and Noob Skins)</span><br>
+              Jason skin by: <span style="color:#56aaff;">Bluudud3</span> (<a href="https://www.planetminecraft.com/skin/jason-forssken/" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Mafioso skin by: <span style="color:#56aaff;">PHIGHTING</span> (<a href="https://www.planetminecraft.com/skin/mafioso-forsaken-dream-game/" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Guest1337 skin by: <span style="color:#56aaff;">ENFIN</span> (<a href="https://www.planetminecraft.com/skin/dffsds/" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Noob skin by: ??? (<a href="https://es.namemc.com/skin/bd153c6f77d160e1" target="_blank" style="color:#56aaff;">link</a>)<br>
+              Note Block Covers: <span style="color:#56aaff;">Aedan</span><br>
+              Songs: Forsaken Sound Team, Key After Key, vladosikos17, 89M, Epic<br><br>
+              Inspired by the Roblox game <b>Forsaken</b>.<br><br>
+              <span style="font-size:0.8em;opacity:0.9;">This mod and this page are not affiliated with Mojang, Microsoft, Roblox Corp. or Forsaken Dev Team.<br>
+              .</span>`,
+      },
     };
 
-    const galleryImages = [
-      { src: "estructura.png", alt: "Estructura / Structure" },
-      { src: "survivors.png", alt: "Survivors" },
-      { src: "killers.png", alt: "Killers" },
-      { src: "skins.png", alt: "Skins" }
-    ];
-
-    function setLang(lang) {
+    function setLanguage(lang) {
+      const c = content[lang];
       document.documentElement.lang = lang;
-      document.title = content[lang].title;
-      document.getElementById('mainTitle').textContent = content[lang].mainTitle;
-      document.getElementById('subtitle').innerHTML = content[lang].subtitle;
-      document.getElementById('featuresTitle').textContent = content[lang].featuresTitle;
-      const featuresList = document.getElementById('featuresList');
+      document.title = c.title;
+      document.getElementById("mainTitle").innerHTML = c.mainTitle;
+      document.getElementById("subtitle").innerHTML = c.subtitle;
+      document.getElementById("featuresTitle").textContent = c.featuresTitle;
+
+      const featuresList = document.getElementById("featuresList");
       featuresList.innerHTML = "";
-      content[lang].features.forEach(f => {
-        const li = document.createElement('li');
-        li.innerHTML = f;
+      c.features.forEach((feat) => {
+        const li = document.createElement("li");
+        li.innerHTML = feat;
         featuresList.appendChild(li);
       });
-      document.getElementById('installTitle').textContent = content[lang].installTitle;
-      const installList = document.getElementById('installList');
+
+      document.getElementById("installTitle").textContent = c.installTitle;
+      const installList = document.getElementById("installList");
       installList.innerHTML = "";
-      content[lang].installSteps.forEach(s => {
-        const li = document.createElement('li');
-        li.innerHTML = s;
+      c.installSteps.forEach((step) => {
+        const li = document.createElement("li");
+        li.innerHTML = step;
         installList.appendChild(li);
       });
-      document.getElementById('downloadBtn').textContent = content[lang].download;
-      document.getElementById('supportTitle').textContent = content[lang].supportTitle;
-      document.getElementById('support').innerHTML = content[lang].support;
-      document.getElementById('creditsText').innerHTML = content[lang].credits;
-      document.getElementById('creditsBtn').textContent = content[lang].creditsBtn;
-      document.getElementById('galleryBtn').textContent = content[lang].galleryBtn;
-      document.getElementById('galleryTitle').textContent = content[lang].galleryTitle;
-      document.getElementById('changelogTitle').textContent = content[lang].changelogTitle;
-      document.getElementById('changelogContent').innerHTML = content[lang].changelogLoading;
-      document.getElementById('lang-es').classList.toggle('active', lang === 'es');
-      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-      fetchLatestRelease(lang);
+
+      document.getElementById("downloadBtn").textContent = c.download;
+      document.getElementById("supportTitle").textContent = c.supportTitle;
+      document.getElementById("supportText").innerHTML = c.support;
+
+      document.getElementById("creditsBtn").textContent = c.creditsBtn;
+      document.getElementById("galleryBtn").textContent = c.galleryBtn;
+
+      document.getElementById("galleryTitle").textContent = c.galleryTitle;
+      const galleryCaptions = document.getElementById("galleryCaptions");
+      galleryCaptions.innerHTML = "";
+      c.galleryCaptions.forEach((caption) => {
+        const span = document.createElement("span");
+        span.textContent = caption;
+        galleryCaptions.appendChild(span);
+      });
+
+      document.getElementById("changelogTitle").textContent = c.changelogTitle;
+
+      // Set credits content
+      document.getElementById("creditsContent").innerHTML = c.credits;
     }
 
-    function renderGallery() {
-      const galleryGrid = document.getElementById('galleryGrid');
-      galleryGrid.innerHTML = '';
-      const lang = document.documentElement.lang;
-      const captions = content[lang].galleryCaptions;
-      galleryImages.forEach((img, idx) => {
-        const item = document.createElement('div');
-        item.className = "gallery-item";
-        const el = document.createElement('img');
-        el.src = img.src;
-        el.alt = img.alt;
-        el.onclick = () => openFullImg(idx);
-        const caption = document.createElement('span');
-        caption.className = "gallery-caption";
-        caption.textContent = captions[idx] || '';
-        item.appendChild(el);
-        item.appendChild(caption);
-        galleryGrid.appendChild(item);
+    function setupLanguageButtons() {
+      const langButtons = document.querySelectorAll(".lang-btn");
+      langButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          langButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          setLanguage(btn.dataset.lang);
+        });
       });
     }
 
-    function openFullImg(idx) {
-      const modal = document.getElementById('fullImgModal');
-      const img = document.getElementById('fullImg');
-      img.src = galleryImages[idx].src;
-      img.alt = galleryImages[idx].alt;
-      modal.style.display = "flex";
-    }
+    window.addEventListener("DOMContentLoaded", () => {
+      setupLanguageButtons();
+      setLanguage("es");
 
-    function closeFullImg() {
-      document.getElementById('fullImgModal').style.display = "none";
-    }
+      // Modals setup
+      const creditsBtn = document.getElementById("creditsBtn");
+      const creditsModal = document.getElementById("creditsModal");
+      const creditsClose = document.getElementById("creditsClose");
 
-    function fetchLatestRelease(lang) {
-      // fallback to current language if not provided
-      lang = lang || document.documentElement.lang || 'es';
-      const contentLang = content[lang];
-      fetch('https://api.github.com/repos/AlfonsoRV69/forsakenmc/releases/latest')
-        .then(response => response.json())
-        .then(release => {
-          if (release && release.body) {
-            document.getElementById('changelogContent').innerHTML =
-              `<strong>${release.name}</strong><br>${release.body.replace(/\n/g, '<br>')}`;
-          } else {
-            document.getElementById('changelogContent').innerHTML = contentLang.changelogNotFound;
-          }
-        })
-        .catch(() => {
-          document.getElementById('changelogContent').innerHTML = contentLang.changelogError;
-        });
-    }
+      creditsBtn.onclick = () => (creditsModal.style.display = "block");
+      creditsClose.onclick = () => (creditsModal.style.display = "none");
 
-    window.onload = function() {
-      setLang('es');
-      document.getElementById('lang-en').onclick = () => setLang('en');
-      document.getElementById('lang-es').onclick = () => setLang('es');
-
-      // Credits Modal
-      var modal = document.getElementById("creditsModal");
-      var btn = document.getElementById("creditsBtn");
-      var span = document.getElementById("closeCredits");
-      btn.onclick = function() { modal.style.display = "block"; }
-      span.onclick = function() { modal.style.display = "none"; }
-      window.onclick = function(event) {
-        if (event.target == modal) { modal.style.display = "none"; }
-        if (event.target == document.getElementById('fullImgModal')) { closeFullImg(); }
-      };
-
-      // Gallery Modal
       const galleryBtn = document.getElementById("galleryBtn");
       const galleryModal = document.getElementById("galleryModal");
-      const closeGallery = document.getElementById("closeGallery");
-      galleryBtn.onclick = function() {
-        galleryModal.style.display = "block";
-        renderGallery();
+      const galleryClose = document.getElementById("galleryClose");
+
+      galleryBtn.onclick = () => (galleryModal.style.display = "block");
+      galleryClose.onclick = () => (galleryModal.style.display = "none");
+
+      window.onclick = function (event) {
+        if (event.target == creditsModal) creditsModal.style.display = "none";
+        if (event.target == galleryModal) galleryModal.style.display = "none";
+        if (event.target == fullImgModal) fullImgModal.style.display = "none";
       };
-      closeGallery.onclick = function() { galleryModal.style.display = "none"; }
 
-      // Full image modal
-      document.getElementById('closeFullImg').onclick = closeFullImg;
+      // Gallery image preview modal
+      const fullImgModal = document.getElementById("fullImgModal");
+      const fullImg = document.getElementById("fullImg");
+      const fullImgClose = document.getElementById("fullImgClose");
 
-      // Changelog inicial (ya se llama en setLang, pero por si recargas el idioma)
-      fetchLatestRelease('es');
-    };
+      fullImgClose.onclick = () => (fullImgModal.style.display = "none");
+
+      document.querySelectorAll(".gallery-grid img").forEach((img) => {
+        img.onclick = () => {
+          fullImg.src = img.src;
+          fullImg.alt = img.alt;
+          fullImgModal.style.display = "flex";
+        };
+      });
+
+      // Fetch changelog from GitHub Releases API
+      const changelogDiv = document.getElementById("changelogContent");
+      changelogDiv.innerHTML = content["es"].changelogLoading;
+
+      fetch(
+        "https://api.github.com/repos/AlfonsoRV69/forsakenmc/releases/latest"
+      )
+        .then((res) => {
+          if (!res.ok) throw new Error("No se pudo cargar");
+          return res.json();
+        })
+        .then((data) => {
+          if (!data.body) {
+            changelogDiv.innerHTML = content["es"].changelogNotFound;
+            return;
+          }
+          // Convert markdown line breaks to <br>
+          changelogDiv.innerHTML = data.body
+            .replace(/\n/g, "<br>")
+            .replace(
+              /#(\s)?ForsakenMC/gi,
+              '<span style="color:#b62e2e;">ForsakenMC</span>'
+            );
+        })
+        .catch(() => {
+          changelogDiv.innerHTML = content["es"].changelogError;
+        });
+    });
   </script>
 </head>
 <body>
   <div class="main-card">
-    <div class="credits-gallery-row">
-      <button class="credits-btn" id="creditsBtn">Créditos</button>
-      <button class="gallery-btn" id="galleryBtn">Galería</button>
+    <div class="lang-switch" aria-label="Cambiar idioma">
+      <button
+        class="lang-btn active"
+        data-lang="es"
+        aria-label="Cambiar a español"
+      >
+        ES
+      </button>
+      <button class="lang-btn" data-lang="en" aria-label="Switch to English">
+        EN
+      </button>
     </div>
-    <div class="lang-switch">
-      <button id="lang-es" class="lang-btn active">Español</button>
-      <button id="lang-en" class="lang-btn">English</button>
-    </div>
-    <img src="fmcpfp.png" class="logo-fmcpfp" alt="ForsakenMC Logo">
+
+    <img
+      src="/fmcpfp.png"
+      alt="Logo ForsakenMC"
+      class="logo-fmcpfp"
+      width="128"
+      height="128"
+    />
     <h1 id="mainTitle">ForsakenMC</h1>
-    <p id="subtitle">
-      ForsakenMC es un mod para <span style="color:#6dca45;">Minecraft Java Edition</span> para <b>NeoForge 1.21.1</b> que trae contenido del popular juego de Roblox <b>Forsaken</b> a Minecraft. ¡Vive nuevas aventuras y desafíos inspirados en Forsaken!
-    </p>
+    <p id="subtitle" style="margin-top: 0.8em;"></p>
+
     <h2 id="featuresTitle">Características principales</h2>
-    <ul id="featuresList">
-      <li>Añade armas, mobs, ítems y mecánicas de Forsaken (Roblox)</li>
-      <li>Añade una nueva estructura de Forsaken</li>
-      <li>Enfréntate a mobs personalizados y desafiantes de Forsaken</li>
-    </ul>
+    <ul id="featuresList" role="list"></ul>
+
+    <!-- Aquí van los botones Créditos y Galería -->
+    <div class="credits-gallery-row">
+      <button
+        class="credits-btn btn"
+        id="creditsBtn"
+        aria-label="Abrir créditos"
+        type="button"
+      >
+        Créditos
+      </button>
+      <button
+        class="gallery-btn btn"
+        id="galleryBtn"
+        aria-label="Abrir galería"
+        type="button"
+      >
+        Galería
+      </button>
+    </div>
+
     <h2 id="installTitle">Instalación</h2>
-    <ol id="installList">
-      <li>Instala <a href='https://neoforged.net/' target='_blank'>NeoForge 1.21.1</a> para Minecraft.</li>
-      <li>Descarga el archivo <code>.jar</code> de ForsakenMC desde la <a href='https://github.com/AlfonsoRV69/forsakenmc/releases' target='_blank'>página de releases</a>.</li>
-      <li>Coloca el archivo en la carpeta <code>mods</code> de tu instalación de Minecraft.</li>
-      <li>¡Inicia el juego y disfruta!</li>
-    </ol>
-    <a href="https://github.com/AlfonsoRV69/forsakenmc/releases" class="btn" id="downloadBtn" target="_blank">Descargar ForsakenMC</a>
+    <ol id="installList" role="list"></ol>
+
+    <button
+      class="btn"
+      id="downloadBtn"
+      aria-label="Descargar ForsakenMC"
+      type="button"
+    >
+      Descargar ForsakenMC
+    </button>
+
     <h2 id="supportTitle">Soporte y comunidad</h2>
-    <p id="support">
-      ¿Dudas o sugerencias? Abre un <a href="https://github.com/AlfonsoRV69/forsakenmc/issues" target="_blank">issue</a>.<br>
-      ¡Gracias por apoyar el mod!
-    </p>
+    <p id="supportText"></p>
+
     <h2 id="changelogTitle">Changelog (Última versión)</h2>
-    <div id="changelogContent">
-      <em>Cargando...</em>
-    </div>
+    <div
+      id="changelogContent"
+      style="text-align:left; max-width:640px; margin:auto; line-height:1.5em; font-size:0.88em;"
+    ></div>
   </div>
+
+  <!-- Botón Discord al final de todo -->
+  <div style="text-align:center; margin: 40px 0 30px 0;">
+    <a
+      href="https://discord.gg/5XU3pMtM"
+      class="discord-btn-footer"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Únete al Discord de ForsakenMC"
+      >Discord</a
+    >
+  </div>
+
   <!-- Modal Créditos -->
-  <div id="creditsModal" class="modal">
+  <div id="creditsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="creditsTitle" aria-describedby="creditsContent">
     <div class="modal-content">
-      <span class="close" id="closeCredits">&times;</span>
-      <div id="creditsText"></div>
+      <button class="close" id="creditsClose" aria-label="Cerrar créditos modal">&times;</button>
+      <div id="creditsContent" tabindex="0" style="text-align:left;"></div>
     </div>
   </div>
+
   <!-- Modal Galería -->
-  <div id="galleryModal" class="modal">
+  <div id="galleryModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-describedby="galleryCaptions">
     <div class="modal-content">
-      <span class="close" id="closeGallery">&times;</span>
-      <h2 id="galleryTitle">Imágenes del Mod</h2>
-      <div class="gallery-grid" id="galleryGrid"></div>
+      <button class="close" id="galleryClose" aria-label="Cerrar galería modal">&times;</button>
+      <h2 id="galleryTitle"></h2>
+      <div class="gallery-grid" aria-live="polite" aria-relevant="additions">
+        <div class="gallery-item">
+          <img
+            src="/forsaken/forsaken_struct_02.webp"
+            alt="Estructura ForsakenMC"
+            tabindex="0"
+            role="button"
+            aria-pressed="false"
+          />
+          <span class="gallery-caption">Estructura</span>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="/forsaken/forsaken_survivor_03.webp"
+            alt="Survivors ForsakenMC"
+            tabindex="0"
+            role="button"
+            aria-pressed="false"
+          />
+          <span class="gallery-caption">Survivors</span>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="/forsaken/forsaken_killer_01.webp"
+            alt="Killers ForsakenMC"
+            tabindex="0"
+            role="button"
+            aria-pressed="false"
+          />
+          <span class="gallery-caption">Killers</span>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="/forsaken/forsaken_skin_noob_01.webp"
+            alt="Skins ForsakenMC"
+            tabindex="0"
+            role="button"
+            aria-pressed="false"
+          />
+          <span class="gallery-caption">Skins</span>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- Modal Imagen Completa -->
-  <div class="full-img-modal" id="fullImgModal">
-    <span class="close-full" id="closeFullImg">&times;</span>
-    <img id="fullImg" src="" alt="Imagen del Mod">
+
+  <!-- Modal Imagen completa galería -->
+  <div
+    id="fullImgModal"
+    class="full-img-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Imagen ampliada"
+    tabindex="-1"
+  >
+    <button class="close-full" id="fullImgClose" aria-label="Cerrar imagen ampliada">
+      &times;
+    </button>
+    <img id="fullImg" alt="" />
   </div>
 </body>
 </html>
